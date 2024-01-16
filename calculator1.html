@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.mdiv{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Calculator.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.calc{
+    width: 300px;
+    height: 400px;
+    background-color: pink;
+    padding: 5px;
+    margin-right: 45%;
+    margin-bottom: 4%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgb(192, 134, 134);
+}
+
+.op{
+    text-align: right;
+    width:100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    height: 100px;
+    cursor: text;
+    color: black;
+    padding-right: 20px;
+    font-size: 20px;
+    box-shadow: none !important;
+}
+
+input{
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    background-color: #595656;
+    color: white;
+    font-weight: bolder;
+    border-radius: 50%;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: lighter;
+    border: none;
+    font-weight: bolder;
+   
+    
+
+    
+}
+
+.O{
+    width: 115px;
+    border-radius: 40px;
+}
+
+.color{
+background-color: orange;
+border: 2px solid brown;
+}
+
+.color:hover{
+    background-color: orange;
+    box-shadow: 0px 0px 8px gray;
+}
+
+.input:hover{
+    background-color: orange;
+    box-shadow: 0px 0px 8px gray;
+}
+
+</style>
+</head>
+<body>
+    <div class="mdiv">
+        <div class="calc">
+            <form>
+                <div>
+                    <input type="text" name="op" class="op">
+                </div>
+                <div>
+                    <input type="button" name="AC" value="AC" onclick="op.value=''" class="">
+                    <input type="button" name="C" value="C" onclick="op.value=Math.floor(op.value/10)" class="">
+                    <input type="button" name="mod" value="%" onclick="op.value+='%'" class="">
+                    <input type="button" name="operator" value="/" onclick="op.value+='/'" class="color">
+               </div>
+
+               <div>
+                <input type="button" name="number" value="7" onclick="op.value+='7'" class="">
+                <input type="button" name="number" value="8" onclick="op.value+='8'" class="">
+                <input type="button" name="number" value="9" onclick="op.value+='9'" class="">
+                <input type="button" name="operator" value="X" onclick="op.value+='*'" class=" color">
+           </div>
+               
+           <div>
+            <input type="button" name="number" value="4" onclick="op.value+='4'" class="">
+            <input type="button" name="number" value="5" onclick="op.value+='5'" class="">
+            <input type="button" name="number" value="6" onclick="op.value+='6'" class="">
+            <input type="button" name="operator" value="-" onclick="op.value+='-'" class="color">
+         </div>
+
+         <div>
+        <input type="button" name="number" value="1" onclick="op.value+='1'" class="">
+        <input type="button" name="number" value="2" onclick="op.value+='2'" class="">
+        <input type="button" name="number" value="3" onclick="op.value+='3'" class="">
+        <input type="button" name="operator" value="+" onclick="op.value+='+'" class="color">
+        </div>
+
+        <div>
+            <input type="button" name="number" value="0" onclick="op.value+='0'" class="O">
+            <input type="button" name="number" value="." onclick="op.value+='.'" class="">
+            <input type="button" name="number" value="=" onclick="op.value=eval(op.value)" class="color">
+           
+            </div>
+
+           
+            </form>
+
+        </div>
+        <div
+    </div>
+</body>
+</html>
